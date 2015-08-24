@@ -6,9 +6,9 @@ Time spent: 1.5 hours
 
 Completed:
 
-* [] Required: User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-* [] Required: Settings page to change the default tip percentage.
-* [] Optional: Can customize tip percentages.
+* [X] Required: User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [X] Required: Settings page to change the default tip percentage.
+* [X] Optional: Can customize tip percentages.
 
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
