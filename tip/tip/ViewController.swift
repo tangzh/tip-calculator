@@ -23,7 +23,10 @@ class ViewController: UIViewController {
         var percentage1 = defaults.doubleForKey("percentage1")
         var percentage2 = defaults.doubleForKey("percentage2")
         var percentage3 = defaults.doubleForKey("percentage3")
+        var defaultIndex = defaults.integerForKey("defaultIndex")
         
+        tipControl.selectedSegmentIndex = defaultIndex
+
         if(percentage1 > 0) {
             tipPercentages[0] = percentage1
             tipControl.setTitle("\(percentage1)", forSegmentAtIndex: 0)
@@ -56,12 +59,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setPercentages()
+        calculate()
     }
-
-    @IBAction func onEditingChanged(sender: AnyObject) {
-        
+    
+    func calculate() {
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        
         
         var billAmount = billField.text._bridgeToObjectiveC().doubleValue
         var tip = billAmount * tipPercentage
@@ -69,6 +71,10 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format:"$%.2f",tip)
         totalLabel.text = String(format:"$%.2f",total)
+    }
+
+    @IBAction func onEditingChanged(sender: AnyObject) {
+        calculate()
     }
 
     @IBAction func onTap(sender: AnyObject) {

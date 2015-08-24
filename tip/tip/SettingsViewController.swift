@@ -13,8 +13,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var per1Label: UITextField!
     @IBOutlet weak var per2Label: UITextField!
     @IBOutlet weak var per3Label: UITextField!
+    @IBOutlet weak var tipControl: UISegmentedControl!
     
     var tipPercentages = [0.18, 0.2, 0.22]
+    
     func setPercentages() {
         var defaults = NSUserDefaults.standardUserDefaults()
         
@@ -35,9 +37,14 @@ class SettingsViewController: UIViewController {
         }
         
         per1Label.text = "\(tipPercentages[0])"
+        tipControl.setTitle("\(tipPercentages[0])", forSegmentAtIndex: 0)
         per2Label.text = "\(tipPercentages[1])"
+        tipControl.setTitle("\(tipPercentages[1])", forSegmentAtIndex: 1)
         per3Label.text = "\(tipPercentages[2])"
-
+        tipControl.setTitle("\(tipPercentages[2])", forSegmentAtIndex: 2)
+        
+        var defaultIndex = defaults.integerForKey("defaultIndex")
+        tipControl.selectedSegmentIndex = defaultIndex
     }
 
     
@@ -81,6 +88,7 @@ class SettingsViewController: UIViewController {
         defaults.setDouble(tipPercentages[0], forKey: "percentage1")
         defaults.setDouble(tipPercentages[1], forKey: "percentage2")
         defaults.setDouble(tipPercentages[2], forKey: "percentage3")
+        defaults.setInteger(tipControl.selectedSegmentIndex, forKey: "defaultIndex")
         defaults.synchronize()
         dismissViewControllerAnimated(true, completion: nil)
     }
