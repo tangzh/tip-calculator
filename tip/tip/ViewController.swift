@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         var defaults = NSUserDefaults.standardUserDefaults()
         
         var percentage1 = defaults.doubleForKey("percentage1")
+        println("\(percentage1)")
         var percentage2 = defaults.doubleForKey("percentage2")
         var percentage3 = defaults.doubleForKey("percentage3")
         var defaultIndex = defaults.integerForKey("defaultIndex")
