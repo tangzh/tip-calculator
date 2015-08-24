@@ -13,6 +13,7 @@
 		B5B4DE791B8AD4400063CF26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B4DE781B8AD4400063CF26 /* Images.xcassets */; };
 		B5B4DE7C1B8AD4400063CF26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B4DE7A1B8AD4400063CF26 /* LaunchScreen.xib */; };
 		B5B4DE881B8AD4400063CF26 /* tipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4DE871B8AD4400063CF26 /* tipTests.swift */; };
+		B5B4DE921B8AE3620063CF26 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4DE911B8AE3620063CF26 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B5B4DE811B8AD4400063CF26 /* tipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B4DE861B8AD4400063CF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5B4DE871B8AD4400063CF26 /* tipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipTests.swift; sourceTree = "<group>"; };
+		B5B4DE911B8AE3620063CF26 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B5B4DE711B8AD4400063CF26 /* AppDelegate.swift */,
 				B5B4DE731B8AD4400063CF26 /* ViewController.swift */,
 				B5B4DE751B8AD4400063CF26 /* Main.storyboard */,
+				B5B4DE911B8AE3620063CF26 /* SettingsViewController.swift */,
 				B5B4DE781B8AD4400063CF26 /* Images.xcassets */,
 				B5B4DE7A1B8AD4400063CF26 /* LaunchScreen.xib */,
 				B5B4DE6F1B8AD4400063CF26 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				B5B4DE741B8AD4400063CF26 /* ViewController.swift in Sources */,
 				B5B4DE721B8AD4400063CF26 /* AppDelegate.swift in Sources */,
+				B5B4DE921B8AE3620063CF26 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = tip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -351,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = tip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -411,6 +417,7 @@
 				B5B4DE8D1B8AD4400063CF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5B4DE8E1B8AD4400063CF26 /* Build configuration list for PBXNativeTarget "tipTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +426,7 @@
 				B5B4DE901B8AD4400063CF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
