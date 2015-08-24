@@ -70,17 +70,19 @@ class SettingsViewController: UIViewController {
 
     @IBAction func changePer1(sender: AnyObject) {
         tipPercentages[0] = per1Label.text._bridgeToObjectiveC().doubleValue
+        tipControl.setTitle("\(tipPercentages[0])", forSegmentAtIndex: 0)
     }
     
     
     @IBAction func changePer2(sender: AnyObject) {
         tipPercentages[1] = per2Label.text._bridgeToObjectiveC().doubleValue
+        tipControl.setTitle("\(tipPercentages[1])", forSegmentAtIndex: 1)
     }
-    
     
     
     @IBAction func changePer3(sender: AnyObject) {
         tipPercentages[2] = per3Label.text._bridgeToObjectiveC().doubleValue
+        tipControl.setTitle("\(tipPercentages[2])", forSegmentAtIndex: 2)
     }
     
     @IBAction func saveChanges(sender: AnyObject) {
