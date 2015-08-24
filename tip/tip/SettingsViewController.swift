@@ -70,7 +70,6 @@ class SettingsViewController: UIViewController {
 
     @IBAction func changePer1(sender: AnyObject) {
         tipPercentages[0] = per1Label.text._bridgeToObjectiveC().doubleValue
-        println("setting up 1")
     }
     
     

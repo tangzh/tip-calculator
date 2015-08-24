@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" title="Tip Caculator" id="LlE-zf-l5w">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="CrE-g9-rJK">
                             <connections>
-                                <segue destination="cXL-To-3Cp" kind="modal" id="cx0-NE-1oW"/>
+                                <segue destination="cXL-To-3Cp" kind="modal" modalTransitionStyle="partialCurl" id="cx0-NE-1oW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
